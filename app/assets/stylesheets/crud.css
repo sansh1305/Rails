@@ -1,0 +1,85 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.btn-grey {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin:auto;
+    margin-bottom: 10px; /* Space between buttons */
+  }
+  
+  .btn-grey:hover {
+    background-color: #5a6268;
+  }
+  
+  .btn-grey:active {
+    background-color: #545b62;
+  }
+  
+  .btn-grey:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .jumbotron {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin:auto;
+    height: 250px;
+    width:450px;
+  }
+  
+  .jumbotron h2 {
+    font-size: 24px;
+  }
+  
+  .jumbotron p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .jumbotron hr {
+    border-top: 1px solid #007bff;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  

@@ -1,0 +1,11 @@
+<div class="welcome-container">
+  <div class="welcome-box">
+    <h1>Welcome</h1>
+    
+    <!-- Buttons for Doctor and Receptionist -->
+    <div class="button-container">
+      <%= button_to "Doctor", patients_doctors_path, method: :get, class: "button-class" %><br>
+      <%= button_to "Receptionist", sign_up_path, method: :get, class: "button-class" %>
+    </div>
+  </div>
+</div>

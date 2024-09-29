@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @crud %>
+
+<div>
+  <%= link_to "Edit this crud", edit_crud_path(@crud), class: "btn-grey" %> |
+  <%= link_to "Back to cruds", cruds_path, class: "btn-grey" %>
+
+  <%= button_to "Destroy this crud", @crud, method: :delete, class: "btn-grey" %>
+</div>

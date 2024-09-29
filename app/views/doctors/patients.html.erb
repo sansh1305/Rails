@@ -1,0 +1,31 @@
+<h1>Registered Patients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone Number</th>
+      <th>House Address</th>
+      <th>Day Registered</th>
+      <th>Email ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.first_name %></td>
+        <td><%= patient.last_name %></td>
+        <td><%= patient.phone_no %></td>
+        <td><%= patient.house_address %></td>
+        <td><%= patient.day_registered %></td>
+        <td><%= patient.email_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<!-- Add a button to redirect to doctors/statistics -->
+<div class="mb-3">
+  <%= button_to "View Statistics", statistics_doctors_path, method: :get, class: "btn btn-secondary" %>
+</div>

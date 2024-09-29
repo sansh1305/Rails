@@ -1,0 +1,19 @@
+<h1 style="text-align: center; margin-bottom: 20px;">Sign In</h1>
+
+<%= form_with url: sign_in_path, scope: :login, local: true, html: { style: "max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;" } do |form| %>
+
+  <div class="mb-3" style="margin-bottom: 15px;">
+    <%= form.label :email, style: "font-weight: bold;" %><br>
+    <%= form.text_field :email, class: "form-control", placeholder: "sansh@gmail.com", style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
+  </div>
+
+  <div class="mb-3" style="margin-bottom: 15px;">
+    <%= form.label :password, style: "font-weight: bold;" %><br>
+    <%= form.password_field :password, class: "form-control", placeholder: "password", style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
+  </div>
+
+  <div class="mb-3" style="text-align: center; margin-top: 20px;">
+    <%= form.submit "Sign In", class: "btn btn-primary", style: "padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;" %>
+  </div>
+
+<% end %>

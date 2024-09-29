@@ -1,0 +1,12 @@
+<% content_for :title, "Editing crud" %>
+
+<h1>Editing Patient Details</h1>
+
+<%= render "form", crud: @crud %>
+
+<br>
+
+<div>
+  <%= link_to "Show this crud", @crud %> |
+  <%= link_to "Back to cruds", cruds_path %>
+</div>

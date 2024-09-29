@@ -1,0 +1,44 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Cruds" %>
+
+<h1>Patient Details</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone No</th>
+      <th>House Address</th>
+      <th>Day Registered</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cruds.each do |crud| %>
+      <tr>
+        <td><%= crud.first_name %></td>
+        <td><%= crud.last_name %></td>
+        <td><%= crud.phone_no %></td>
+        <td><%= crud.house_address %></td>
+        <td><%= crud.day_registered %></td>
+        <td><%= crud.email_id %></td>
+        <td>
+          <%= link_to "Show", crud %> |
+          <%= link_to "Edit", edit_crud_path(crud) %> |
+          <%= link_to "Delete", crud, method: :delete, data: { confirm: "Are you sure?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div style="text-align: center;"> <
+  <%= link_to "New Crud", new_crud_path, class: "btn-grey" %>
+  <%= button_to "Logout", logout_path, method: :delete, class: "btn-grey" %>
+</div>
+
+
+

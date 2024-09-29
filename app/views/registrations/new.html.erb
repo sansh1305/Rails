@@ -1,0 +1,37 @@
+<h1 style="text-align: center; margin-bottom: 20px;">Sign Up</h1>
+
+<%= form_with model: @login, url: sign_up_path, data: { turbo: false }, html: { style: "max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;" } do |form| %>
+
+  <% if @login.errors.any? %>
+    <div class="alert alert-danger" style="color: red; margin-bottom: 15px;">
+      <% @login.errors.full_messages.each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="mb-3" style="margin-bottom: 15px;">
+    <%= form.label :email, style: "font-weight: bold;" %><br>
+    <%= form.text_field :email, class: "form-control", placeholder: "sansh@gmail.com", style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
+  </div>
+
+  <div class="mb-3" style="margin-bottom: 15px;">
+    <%= form.label :password, style: "font-weight: bold;" %><br>
+    <%= form.password_field :password, class: "form-control", placeholder: "password", style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
+  </div>
+
+  <div class="mb-3" style="margin-bottom: 15px;">
+    <%= form.label :password_confirmation, style: "font-weight: bold;" %><br>
+    <%= form.password_field :password_confirmation, class: "form-control", placeholder: "confirm password", style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
+  </div>
+
+  <div class="mb-3" style="margin-bottom: 20px; text-align: center;">
+    <%= form.submit "Sign Up", class: "btn btn-primary", style: "padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;" %>
+  </div>
+
+<% end %>
+
+<!-- Add a button that redirects to the sign-in page -->
+<div class="mb-3" style="text-align: center;">
+  <%= link_to "Already have an account? Sign In", sign_in_path, class: "btn btn-secondary", style: "padding: 10px 20px; background-color: #6c757d; color: white; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;" %>
+</div>

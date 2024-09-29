@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">Patient Registration Statistics</h1>
+
+<!-- Add the image -->
+<div style="text-align: center;">
+  <%= image_tag "image.png", alt: "Chart Image", class: "img-fluid", style: "max-width: 100%; height: auto;" %>
+</div>
+
+
+<div style="display: flex; justify-content: center;  height: 100vh;">
+  <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-danger" %>
+</div>
+
+
+<!-- Display the chart -->
+<%= line_chart @patients_data.map { |data| [data[:date], data[:count]] } %>
+
+<!-- Add Logout button -->
+
